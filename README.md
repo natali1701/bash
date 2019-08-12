@@ -5,7 +5,7 @@ find /home/nnaumenko/OtusHW5 -type f -mtime +31 -exec rm {} \;
 for _dir in $(find -type d)
 do
   cd $_dir
-  ls -t -p | grep -v '/$' | tail -n+11 | xargs rm ;
+  ls -t -p | grep -v '/$' | tail -n+11 | xargs 0 -r rm ;
   echo $_dir cleared
   cd $working_dir
 done
